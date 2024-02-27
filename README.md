@@ -56,9 +56,10 @@ Obviamente cada um desses SGBD's possuem suas peculiaridades, porém o SQL não 
 
 # Comandos básicos
 
-* SELECT:
-  Selecionar todas as colunas e linhas da tabela
-  ```sql
+## SELECT:
+
+   Selecionar todas as colunas e linhas da tabela
+  ```SQL
     SELECT * FROM Tabela;
   ```
   
@@ -68,13 +69,13 @@ Obviamente cada um desses SGBD's possuem suas peculiaridades, porém o SQL não 
   ```
   
   Seleciona apenas colunas específicas da tabela e as permite dar um nome a elas (apenas na consulta, não altera o nome das colunas do banco de dados):
-  ```
+  ```SQL
     SELECT Col1 AS 'Coluna 1', Col2 AS 'Coluna 2'
     FROM Tabela;
   ```
   
   Selecionar todas as colunas e delimita a quantidade de linhas desejadas da tabela
-  ```
+  ```SQL
     SELECT * FROM Tabela LIMIT 50;
   ```
 
