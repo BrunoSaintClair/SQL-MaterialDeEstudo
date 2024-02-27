@@ -53,3 +53,28 @@ O SQL é uma linguagem de consulta de banco de dados, enquanto MySQL, Oracle, Po
 O SQL pode ser usado em diferentes programas, ou seja, a dúvida não deve ser: aprender SQL ou algum desses, e sim, aprender SQL para utilizá-lo em qual desses programas?
 
 Obviamente cada um desses SGBD's possuem suas peculiaridades, porém o SQL não é diferente de um para o outro.
+
+# Comandos básicos
+
+* SELECT:
+  Selecionar todas as colunas e linhas da tabela
+  ```sql
+    SELECT * FROM Tabela;
+  ```
+  
+  Seleciona apenas colunas específicas da tabela
+  ```SQL
+    SELECT Col1, Col2, Col3 FROM Tabela;
+  ```
+  
+  Seleciona apenas colunas específicas da tabela e as permite dar um nome a elas (apenas na consulta, não altera o nome das colunas do banco de dados):
+  ```
+    SELECT Col1 AS 'Coluna 1', Col2 AS 'Coluna 2'
+    FROM Tabela;
+  ```
+  
+  Selecionar todas as colunas e delimita a quantidade de linhas desejadas da tabela
+  ```
+    SELECT * FROM Tabela LIMIT 50;
+  ```
+
