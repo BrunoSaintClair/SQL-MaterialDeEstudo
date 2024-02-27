@@ -15,8 +15,13 @@ Toda tabela vai conter uma linha de ID, terão sempre uma coluna de identificado
 
 # O que é um banco de dados?
 
-Um banco de dados é um conjunto de tabelas, que armazenam informações sobre um determinado negócio, empresa ou área.
+Um banco de dados é um conjunto de tabelas, é basicamente qualquer coleção de dados relacionados que armazenam informações sobre um determinado negócio, empresa ou área.
 Um banco de dados também pode ser chamado de Schema.
+
+Exemplos de bancos de dados:
+* Lista de compras
+* Lista telefônica
+* Lista de tarefas
 
 # SQL: Structured Query Language
 
@@ -33,15 +38,15 @@ Em resumo, é uma leitura dos dados de uma tabela dentro de uma tabela do banco 
 
 Ou seja, quando queremos visualizar determinados dados de uma tabela, na prática o que queremos é fazer uma consulta aos dados do banco de dados. 
 
-## O que é um sistema de gerenciamento de banco de dados ou SGBD?
+## O que é um sistema de gerenciamento de banco de dados ou SGBD/DBMS?
 
-Um SGBD permite ao desenvolvedor trabalhar com diferentes tableas de um banco de dados através de uma interface, essa interface seria basicamente um programa que nos permite fazer a leitura de tabelas de um banco de dados e utilizar o SQL para manipular esses dados, tudo de uma maneira bem visual e user-friendly.
+Um SGBD permite ao desenvolvedor trabalhar com diferentes tabelas de um banco de dados através de uma interface, essa interface seria basicamente um programa que nos permite fazer a leitura de tabelas de um banco de dados e utilizar o SQL para manipular esses dados, tudo de uma maneira bem visual e user-friendly.
 
 Um SGBD é composto essencialmente por 2 partes:
 * Um servidor, onde vamos conseguir armazenar nossos banco de dados.
 * Uma interface amigável que nos permite escrever os códgios em SQL para acessar os bancos.
 
-## Mas afinal, eu devo aprender SQL, MySQL, Oracle, Postgres ou o que?
+## Mas afinal, eu devo aprender SQL, MySQL, Oracle, Postgres ou o quê?
 
 O SQL é uma linguagem de consulta de banco de dados, enquanto MySQL, Oracle, Postgres entre outros são programas utilizados para gerenciamento de banco de dados.
 
