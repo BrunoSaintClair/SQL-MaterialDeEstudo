@@ -95,7 +95,7 @@ Obviamente cada um desses SGBD's possuem suas peculiaridades, porém o SQL não 
 
 ## WHERE
 
-   Fazer consultas passando um filtro na tabela.
+   Fazer consultas passando um filtro na tabela:
    ```SQL
       SELECT *
       FROM <Nome da Tabela>
@@ -109,4 +109,56 @@ Obviamente cada um desses SGBD's possuem suas peculiaridades, porém o SQL não 
       WHERE Sexo = 'F';
    ```
 
+## Cálculos no SQL
 
+  ### SUM
+  Retorna soma de todos os valores da coluna passada como argumento:
+  ```SQL
+      SELECT SUM(<Nome da coluna>) FROM <Tabela>;
+  ```
+
+  OBS.: É possível nomear o retorno dessa função usando 'AS' e o nome logo em seguida.
+  Exemplo:
+  ```SQL
+      SELECT SUM(Receita_Venda) AS 'Receita total' FROM pedidos;
+   ```
+
+
+  ### COUNT
+  Contar quantidade de dados na coluna:
+  ```SQL
+      SELECT COUNT(<Nome da coluna>) FROM <Tabela>;
+  ```
+
+  Exemplo: Contar quantidade de homens na tabela:
+  ```SQL
+      SELECT COUNT(Nome) FROM clientes
+      WHERE Sexo = 'M';
+  ```
+
+  OBS.: Assim como na função SUM, o 'AS' para renomear o retorno da função, também funciona.
+
+
+  ### AVG
+  Traz a média daquela coluna:
+  ```SQL
+      SELECT AVG(<Nome da coluna>) FROM <Tabela>;
+  ```
+
+  Exemplo: Média de renda anual das clientes mulheres de uma tabela:
+  ```SQL
+      SELECT AVG(Renda_Anual) FROM clientes
+      WHERE Sexo = 'F';
+  ```
+
+  OBS.: Assim como nas funções acima, o 'AS' para renomear o retorno da função, também funciona.
+
+
+  ### MIN e MAX
+  Retorna os valores mínimos e máximos(respectivamente) de uma coluna específica:
+  ```SQL
+      SELECT MIN(<Nome da coluna>) FROM <Nome da tabela>;
+
+      SELECT MAX(<Nome da coluna>) FROM <Nome da tabela>;
+  ```
+  
