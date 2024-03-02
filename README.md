@@ -56,26 +56,57 @@ Obviamente cada um desses SGBD's possuem suas peculiaridades, porém o SQL não 
 
 # Comandos básicos
 
-## SELECT:
+## SELECT
 
-   Selecionar todas as colunas e linhas da tabela
+  Selecionar todas as colunas e linhas da tabela:
   ```SQL
-    SELECT * FROM Tabela;
+      SELECT * FROM <Nome da Tabela>;
   ```
   
-  Seleciona apenas colunas específicas da tabela
+  Seleciona apenas colunas específicas da tabela:
   ```SQL
-    SELECT Col1, Col2, Col3 FROM Tabela;
+      SELECT Col1, Col2, Col3 FROM <Nome da Tabela>;
   ```
   
   Seleciona apenas colunas específicas da tabela e as permite dar um nome a elas (apenas na consulta, não altera o nome das colunas do banco de dados):
   ```SQL
-    SELECT Col1 AS 'Coluna 1', Col2 AS 'Coluna 2'
-    FROM Tabela;
+      SELECT Col1 AS 'Coluna 1', Col2 AS 'Coluna 2'
+      FROM <Nome da Tabela>;
   ```
   
-  Selecionar todas as colunas e delimita a quantidade de linhas desejadas da tabela
+  Selecionar todas as colunas e delimita a quantidade de linhas desejadas da tabela:
   ```SQL
-    SELECT * FROM Tabela LIMIT 50;
+      SELECT * FROM <Nome da Tabela> LIMIT 50;
   ```
+
+## Order by
+
+  Selecionar colunas e linhas selecionadas da tabela, e aplicar a ordem baseada na coluna passada como argumento:
+  ```SQL
+      SELECT *
+      FROM <Nome da Tabela>
+      ORDER BY <Nome da coluna>;
+  ```
+
+* OBS.: Para trazer com a ordem descendente, é só colocar 'DESC' após o nome da coluna.
+
+* OBS. 2: Caso sejam passados duas colunas para ordenar, a tabela irá ser ordenada pela ordem da primeira, porém, se na primeira coluna existir uma repetição de um mesmo valor em linhas diferentes, essas linham serão ordenadas pelo valor da segunda coluna.
+
+
+## WHERE
+
+   Fazer consultas passando um filtro na tabela.
+   ```SQL
+      SELECT *
+      FROM <Nome da Tabela>
+      WHERE <Filtro>;
+   ```
+
+   Exemplo: Filtrar a tabela de clientes deixando apenas pessoas do sexo feminino.
+   ```SQL
+      SELECT *
+      FROM clientes
+      WHERE Sexo = 'F';
+   ```
+
 
