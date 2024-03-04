@@ -1,5 +1,11 @@
 # SQL-MaterialDeEstudo
 
+Material para estudo de conceitos e comandos básicos de SQL. 
+
+Feito baseado no Minicurso: https://pages.hashtagtreinamentos.com/minicurso-basico-sql?blog=1n4033rer&video=3dep762tr
+
+Alterações serão feitas no futuro.
+
 ## O que é um dado?
 
 Um dado é uma informação sobre alguma coisa. O preço de um produto pode ser um dado, a quantidade vendida é um dado, uma curtida em uma foto é um dado.
@@ -181,7 +187,7 @@ Obviamente cada um desses SGBD's possuem suas peculiaridades, porém o SQL não 
 
 ## JOIN
   * O Join permite a gente relacionar tabelas, e trazer informações da Tabela A para Tabela B, desde que as tabelas possuam uma coluna em comum(identificador).
-    * Existem diversos tipos de Join, mas o mais comum é o inner join.
+    * Existem diversos tipos de Join(inner join, outer join, left outer join e rigth outer join), mas o mais comum é o inner join.
 
   ```SQL
         SELECT <Nomes das colunas>
