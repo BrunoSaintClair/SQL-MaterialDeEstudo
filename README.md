@@ -79,6 +79,7 @@ Obviamente cada um desses SGBD's possuem suas peculiaridades, porém o SQL não 
       SELECT * FROM <Nome da Tabela> LIMIT 50;
   ```
 
+
 ## Order by
 
   Selecionar colunas e linhas selecionadas da tabela, e aplicar a ordem baseada na coluna passada como argumento:
@@ -108,6 +109,7 @@ Obviamente cada um desses SGBD's possuem suas peculiaridades, porém o SQL não 
       FROM clientes
       WHERE Sexo = 'F';
    ```
+
 
 ## Cálculos no SQL
 
@@ -161,4 +163,40 @@ Obviamente cada um desses SGBD's possuem suas peculiaridades, porém o SQL não 
 
       SELECT MAX(<Nome da coluna>) FROM <Nome da tabela>;
   ```
-  
+
+
+## GROUP BY
+  Permite agrupar dados e cria uma espécie de resumo:
+    ```SQL
+        SELECT <> FROM <Nome da tabela>
+        GROUP BY <Nome da coluna que você deseja agrupar>;
+    ```
+
+  Exemplo: Contar quantas vezes cada marca aparece, e relacionando com o nome da marca na hora da visualização:
+  ```SQL
+      SELECT Marca_Produto, COUNT(Marca_Produto) 
+      FROM produtos
+      GROUP BY Marca_Produto;
+  ```
+
+## JOIN
+  * O Join permite a gente relacionar tabelas, e trazer informações da Tabela A para Tabela B, desde que as tabelas possuam uma coluna em comum(identificador).
+    * Existem diversos tipos de Join, mas o mais comum é o inner join.
+
+  ```SQL
+        SELECT <Nomes das colunas>
+        FROM <Nome da tabela>
+
+        INNER JOIN <Nome da outra tabela, a qual você deseja usar para complementar a primeira>;
+        ON <Nome da primeira tabela.ID_em_comum> = <Nome da segunda tabela.ID_em_comum>;
+  ```
+
+  Exemplo: Criar um agrupamento que mostre o total de receita (tabela pedidos) por loja:
+  ```SQL
+      SELECT Loja, SUM(Receita_Venda) AS 'Receita Total'
+      FROM pedidos
+
+      INNER JOIN lojas
+      ON pedidos.ID_Loja = lojas.ID_Loja
+      GROUP BY Loja
+  ``
