@@ -1,5 +1,6 @@
 # SQL-MaterialDeEstudo
-Material para estudo de SQL.
+Material para estudo de conceitos e comandos básicos de SQL. Alterações serão feitas no futuro.
+
 
 ## O que é um dado?
 
