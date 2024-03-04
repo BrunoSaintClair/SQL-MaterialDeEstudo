@@ -1,5 +1,7 @@
 # SQL-MaterialDeEstudo
-Material para estudo de conceitos e comandos básicos de SQL. Alterações serão feitas no futuro.
+Material para estudo de conceitos e comandos básicos de SQL. 
+Feito baseado no Minicurso: https://pages.hashtagtreinamentos.com/minicurso-basico-sql?blog=1n4033rer&video=3dep762tr
+Alterações serão feitas no futuro.
 
 
 ## O que é um dado?
