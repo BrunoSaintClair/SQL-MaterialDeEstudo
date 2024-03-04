@@ -167,18 +167,19 @@ Obviamente cada um desses SGBD's possuem suas peculiaridades, porém o SQL não 
 
 
 ## GROUP BY
-  Permite agrupar dados e cria uma espécie de resumo:
-    ```SQL
-        SELECT <> FROM <Nome da tabela>
-        GROUP BY <Nome da coluna que você deseja agrupar>;
-    ```
-
+  Permite agrupar dados e cria uma espécie de resumo: 
+  ```SQL
+      SELECT <> FROM <Nome da tabela>
+      GROUP BY <Nome da coluna que você deseja agrupar>;
+  ```
+    
   Exemplo: Contar quantas vezes cada marca aparece, e relacionando com o nome da marca na hora da visualização:
   ```SQL
       SELECT Marca_Produto, COUNT(Marca_Produto) 
       FROM produtos
       GROUP BY Marca_Produto;
   ```
+
 
 ## JOIN
   * O Join permite a gente relacionar tabelas, e trazer informações da Tabela A para Tabela B, desde que as tabelas possuam uma coluna em comum(identificador).
@@ -200,4 +201,4 @@ Obviamente cada um desses SGBD's possuem suas peculiaridades, porém o SQL não 
       INNER JOIN lojas
       ON pedidos.ID_Loja = lojas.ID_Loja
       GROUP BY Loja
-  ``
+  ```
